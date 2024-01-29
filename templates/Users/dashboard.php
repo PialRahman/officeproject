@@ -52,7 +52,7 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="font-size:15px;">
               <li><a class="dropdown-item" href="#"> email</a></li>
-              <li><a class="dropdown-item" href="#">Log out </a></li>
+              <li><a class="dropdown-item" href="#">Log out <i class="fa fa-sign-out"></i> </a></li>
             </ul>
           </li>
 </ul>
@@ -88,7 +88,7 @@
               Dashboard
             </a>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="font-size:15px;">
-              <li><a class="dropdown-item" href="#"> Defaults</a></li>
+              <li><a class="dropdown-item" href="#"> Default</a></li>
               <li><a class="dropdown-item" href="#">Analytic</a></li>
               <li><a class="dropdown-item" href="#">Ecommerce</a></li>
             </ul>
