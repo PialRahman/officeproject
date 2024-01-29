@@ -4,7 +4,8 @@
  * @var \App\Model\Entity\User $user
  */
 ?>
-<div class="row">
+<div class="row" style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp');">>
+    
     <aside class="column">
         <div class="side-nav">
             <h4 class="heading"><?= __('Actions') ?></h4>
@@ -13,11 +14,11 @@
             <?= $this->Html->link(__('add'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
         </div>
     </aside>
-    <div class="column column-80">
-        <div class="users form content">
+    <div class="column column-180 d-flex justify-content-center align-items-center">
+        <div class="users form content col-lg-4 mb-5">
             <?= $this->Form->create($user) ?>
             <fieldset>
-                <legend><?= __('Add User') ?></legend>
+               <h2 class="text-center">Register</h2>
                 <?php
                     echo $this->Form->control('email');
                     echo $this->Form->control('password');
@@ -26,12 +27,14 @@
                     echo $this->Form->hidden('status',['value'=>1]);
                 ?>
             </fieldset>
-             <br>
-            <?= $this->Form->button(__('Submit')) ?>
+            <?= $this->Form->button(__('Register'),[
+    'class' => 'btn btn-warning col-lg-12',
+]) ?>
             <?= $this->Form->end() ?>
         </div>
     </div>
 </div>
+
 
 
 
