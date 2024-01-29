@@ -4,12 +4,17 @@
  * @var iterable<\App\Model\Entity\User> $users
  */
 ?>
-
-<div class="users index content">
-<?= $this->Html->link(__('Login'), ['action' => 'login'], ['class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('List user'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('add'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
+<div class="">
+<div class="row">
+<div class="col-lg-3 float-start">
+<div class="users index content bg-dark" style="height:500vh;">
+<?= $this->Html->link(__('Login'), ['action' => 'login'], ['class' => 'side-nav-item text-white']) ?>
+            <?= $this->Html->link(__('List user'), ['action' => 'index'], ['class' => 'side-nav-item text-white']) ?>
+            <?= $this->Html->link(__('add'), ['action' => 'add'], ['class' => 'side-nav-item text-white']) ?>
         </div>
+</div>
+
+<div class="col-lg-9 float-end">
     <h3><?= __('Users') ?></h3>
     <div class="table-responsive">
         <table>
@@ -54,3 +59,15 @@
         <p><?= $this->Paginator->counter(__('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')) ?></p>
     </div>
 </div>
+</div>
+</div>
+
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+    
