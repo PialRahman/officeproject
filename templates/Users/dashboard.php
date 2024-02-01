@@ -15,79 +15,198 @@
   
   <!-- Include your custom CSS styles here -->
   <style>
+   
     body {
       background-color: #f8f9fa; /* Set your preferred background color */
       font-size:15px;
     }
+  
 
     .sidebar {
       background-color: #343a40; /* Set your preferred sidebar background color */
       color: #ffffff; /* Set your preferred text color for the sidebar */
     }
+    /* mobile */
+    @media screen and (max-width: 430px) {
+  .card {
+    background-color: yellow;
+  }
+  .qtn{
+    width:90%;
+    height:140px;
+    margin-left:auto;
+    margin-bottom:40px;
+    
+  }
+  .checkbtn{
+      color:white;
+      float:right;
+      display:block;
+      margin-right:100px; 
+      font-size:20px;
+    }
+    ul{
+      transition: all 0.5s;
+      
+    }
+    #check{
+      display:none;
+    }
+    #check:checked ~ul{
+      margin-left:10px;
+    }
+  .qtnty{
+    width:92%;
+    height:390px;
+    margin-left:auto;
+    margin-bottom:50px;
+  }
+  .tbdsn{
+    overflow-x:scroll;
+  }
+ 
+}
+/* tablet */
+
+@media screen and (min-width: 431px) {
+  .card {
+    background-color: red;
+  }
+  .qtn{
+    width:90%;
+    margin-left:10px;
+    margin-bottom:60px;
+  }
+  .checkbtn{
+      color:white;
+      float:right;
+      display:block;
+      margin-right:100px; 
+    }
+    #check{
+      display:none;
+    }
+    #check:checked ~ul{
+      left:0;
+    }
+  .qtnty{
+    width:115%;
+    margin-left:20px;
+    margin-right:20px;
+    margin-bottom:30px;
+    margin-bottom:60px;
+  }
+  
+}
+@media screen and (max-height: 720px) {
+  .card {
+    background-color: gold;
+  }
+  .qtn{
+    width:90%;
+    margin-left:10px;
+    margin-bottom:60px;
+  }
+  .qtnty{
+    width:90%;
+    margin-left:20px;
+    margin-right:20px;
+    margin-bottom:30px;
+    margin-bottom:60px;
+  }
+  .tbdsn{
+    overflow-x:scroll;
+  }
+  
+}
+@media screen and (max-height: 653px) {
+  .card {
+    background-color: gold;
+  }
+  .qtn{
+    width:90%;
+    margin-left:10px;
+    margin-bottom:60px;
+  }
+  .qtnty{
+    width:90%;
+    margin-left:20px;
+    margin-right:20px;
+    margin-bottom:30px;
+    margin-bottom:60px;
+  }
+  
+  
+}
+@media screen and (height: 1366px) {
+  .card {
+    background-color: pink;
+  }
+  .qtn{
+    width:90%;
+    margin-left:10px;
+    margin-bottom:60px;
+  }
+  .qtnty{
+    width:90%;
+    margin-left:20px;
+    margin-right:20px;
+    margin-bottom:30px;
+    margin-bottom:60px;
+  }
+  .tbdsn{
+    overflow-x:scroll;
+  }
+  .ers{
+    width:100%;
+  }
+  
+}
+
+/* desktop */
+
+@media screen and (min-width:1025px) {
+  .card {
+    background-color: white;
+  }
+  .qtn{
+    width:100%;
+    margin-left:0px;
+    margin-bottom:0px;
+  }
+.qtnty{
+  width:100%;
+    margin-left:0px;
+    margin-bottom:0px;
+    margin-bottom:0px;
+}
+.checkbtn{
+      color:white;
+      float:right;
+      display:none;
+      margin-right:100px; 
+    }
+
+}
   </style>
 </head>
 <body>
 
 
-    <div class="container-fluid">
+    <div class="">
        <div class="row">
-            <div class="col-lg-2 bg-dark" style="margin-left:-8px;">
-            <h2 class="text-white" >Dashboard</h2>
-                
-            </div>
-            <div class="col-lg-10 bg-white border-0 shadow">
-            <ul class="nav nav-pills float-end m-2">
-  <li class="nav-item">
-    <a class="nav-link active" href="#">Pages</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Layout</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Profile</a>
-  </li>
-  <li class="nav-item dropdown">
-            <a class="nav-link text-dark dropdown-toggle" href="#" id="dropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              User
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="font-size:15px;">
-              <li><a class="dropdown-item" href="#"> email</a></li>
-              <li><a class="dropdown-item" href="#">Log out <i class="fa fa-sign-out"></i> </a></li>
-            </ul>
-          </li>
-</ul>
-                
-            </div>
-       </div>
-    </div>
-<!-- <div class="container-fluid">
-    <div class="row">
-      <div class="col-lg-4">
-
-      </div>
-    </div>
-    <div class="row col-lg-9 bg-info">
-      <h1>dfgfgdfg</h1>
-    </div>
-    <div class="row col-lg-3">
-      <h1>dfgfgdfg</h1>
-    </div>
-    <div class="row col-lg-3">
-      <h1>dfgfgdfg</h1>
-    </div>
-     
-</div> -->
-<div class="container-fluid">
-  <div class="row">
-    <!-- Sidebar -->
-    <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-dark sidebar" style="height: windowHeight; margin-left:-8px;">
-      <div class="position-sticky">
+        <div class="col-lg-2">
+        <nav id="sidebar" class="sidebar bg-dark ch-100" style="height:250vh; margin-left:-8px;">
+        <input type="checkbox" id="check">
+    <label for="check" class="checkbtn"><i class="fa fa-bars"></i></label>
+    <div class="position-sticky">
+      
         <ul class="nav flex-column">
           <li class="nav-item dropdown">
             <a class="nav-link text-white dropdown-toggle" href="#" id="dropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Dashboard
             </a>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="font-size:15px;">
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="font-size:15px; width:200px;">
               <li><a class="dropdown-item" href="#"> Default</a></li>
               <li><a class="dropdown-item" href="#">Analytic</a></li>
               <li><a class="dropdown-item" href="#">Ecommerce</a></li>
@@ -102,7 +221,7 @@
             <a class="nav-link text-white dropdown-toggle" href="#" id="dropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Auths
             </a>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="font-size:15px;">
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="font-size:15px; width:200px;">
               <li><a class="dropdown-item" href="#"> Defaults</a></li>
               <li><a class="dropdown-item" href="#">Analytic</a></li>
               <li><a class="dropdown-item" href="#">Ecommerce</a></li>
@@ -112,7 +231,7 @@
             <a class="nav-link text-white dropdown-toggle" href="#" id="dropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Dropdown
             </a>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="font-size:15px;">
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="font-size:15px; width:200px;">
               <li><a class="dropdown-item" href="#">Action</a></li>
               <li><a class="dropdown-item" href="#">Another action</a></li>
               <li><a class="dropdown-item" href="#">Something else here</a></li>
@@ -122,7 +241,7 @@
             <a class="nav-link text-white dropdown-toggle" href="#" id="dropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Form
             </a>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="font-size:15px;">
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="font-size:15px; width:200px;">
               <li><a class="dropdown-item" href="#"> Defaults</a></li>
               <li><a class="dropdown-item" href="#">Analytic</a></li>
               <li><a class="dropdown-item" href="#">Ecommerce</a></li>
@@ -132,7 +251,7 @@
             <a class="nav-link text-white dropdown-toggle" href="#" id="dropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Table 
             </a>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="font-size:15px;">
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="font-size:15px; width:200px;">
               <li><a class="dropdown-item" href="#"> Defaults</a></li>
               <li><a class="dropdown-item" href="#">Analytic</a></li>
               <li><a class="dropdown-item" href="#">Ecommerce</a></li>
@@ -146,13 +265,41 @@
         </ul>
       </div>
     </nav>
-    <!-- Content -->
-    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+        </div>
+            <div class="col-lg-10 col-md-12 col-sm-12 bg-white border-0 shadow mb-auto">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light flex-column">
+  <div class="container-fluid">
+   <button class="navbar-toggler me-auto text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Pages</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Layout</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Users
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">email</a></li>
+            <li> <a class="nav-link" href="#">Log out <i class="fa fa-sign-out"></i></a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </div>
+  </div>   
+</nav>
+<main class="col-lg-12 col-md-12">
       <!-- Your page content goes here -->
       <h4 class="mt-2">Admin Dashboard</h4>
       <div class="row">
-  <div class="col-lg-3">
-    <div class="card border-0 shadow">
+  <div class="col-lg-3 col-md-6">
+    <div class="qtn card border-0 shadow">
       <div class="card-body">
         <h5 class="card-title text-success">Total Earning</h5>
         <h2 class="card-text text-success">$3000 <i class="fa fa-money text-success ms-5"></i></h2>
@@ -160,8 +307,8 @@
       </div>
     </div>
   </div>
-  <div class="col-lg-3">
-    <div class="card border-0 shadow">
+  <div class="col-lg-3 col-md-6">
+    <div class="qtn card border-0 shadow">
       <div class="card-body bg-primary">
         <h5 class="card-title text-white">Visitors</h5>
          <h2 class="card-text text-white">120 <i class="fa fa-user text-white ms-5"></i></h2>
@@ -169,8 +316,8 @@
       </div>
     </div>
   </div>
-  <div class="col-lg-3">
-    <div class="card border-0 shadow">
+  <div class="col-lg-3 col-md-6">
+    <div class="qtn card border-0 shadow">
       <div class="card-body">
         <h5 class="card-title text-danger">Orders</h5>
          <h2 class="card-text text-danger">400 <i class="fa fa-shopping-cart text-danger ms-5"></i></h2>
@@ -178,18 +325,18 @@
       </div>
     </div>
   </div>
-  <div class="col-lg-3">
-    <div class="card border-0 shadow">
+  <div class="col-lg-3 col-md-6">
+    <div class="qtn card border-0 shadow">
       <div class="card-body">
         <h5 class="card-title text-info">Sales</h5>
          <h2 class="card-text text-info">120 <i class="fa fa-bullhorn text-info ms-5"></i></h2>
-         <p>The total count for sales</p>
+         <p>The total count in sales</p>
       </div>
     </div>
     
   </div>
-  <div class="col-lg-6 mt-4">
-    <div class="card border-0 shadow">
+  <div class="col-lg-6 col-md-10 mt-4">
+    <div class="qtnty card border-0 shadow">
       <div class="card-body">
       <div class="container mt-5">  
       <h5 class="card-title">Sales Report</h5>
@@ -198,8 +345,8 @@
       </div>
     </div>
   </div>
-<div class="col-lg-6 mt-4">
-    <div class="card border-0 shadow">
+<div class="col-lg-6 col-md-10 mt-4">
+    <div class="qtnty card border-0 shadow">
       <div class="card-body">
       <div class="container mt-5">  
       <h5 class="card-title">Sales Report</h5>
@@ -212,8 +359,8 @@
   <h2 class="mt-4">Employee Details</h2>
   <h4 class="mt-2">Employee status</h4>
   <hr>
-<div class="col-lg-3 mt-4">
-    <div class="card border-0 shadow" style="height: 81.5vh;">
+<div class="ers col-lg-3 col-md-10 mt-4">
+    <div class="qtnty card border-0 shadow" style="height: 81.5vh;">
       <div class="card-body">
       <div class="container mt-5">  
       <h5 class="card-title">Sales Report</h5>
@@ -223,10 +370,10 @@
       </div>
     </div>
   </div>
-  <div class="col-lg-9 mt-4">
-    <div class="card border-0 shadow">
-      <div class="card-body">
-      <table id="example" class="table table-striped" style="width:100%">
+  <div class="ers col-lg-9 col-md-10 mt-4">
+    <div class="qtnty card border-0 shadow">
+      <div class="tbdsn card-body">
+      <table id="example" class="table table-striped" style="width:100%;">
         <thead>
             <tr>
                 <th>Name</th>
@@ -709,11 +856,11 @@
       </div>
     </div>
   </div>
-  <div class="col-lg-12 mt-4">
+  <div class="col-lg-12 col-md-10 mt-4">
   <h2>Progress</h2>
   <p>information progress</p>
   <hr>
-    <div class="card border-0 shadow mb-4" style="margin-top:20px;">
+    <div class=" card border-0 shadow mb-4" style="margin-top:20px;">
       <div class="card-body">
       <table id="example" class="table table-striped" style="width:100%">
         <thead>
@@ -789,6 +936,33 @@
   </div>
 </div>
     </main>
+                </div>
+
+            
+       </div>
+    </div>
+<!-- <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-4">
+
+      </div>
+    </div>
+    <div class="row col-lg-9 bg-info">
+      <h1>dfgfgdfg</h1>
+    </div>
+    <div class="row col-lg-3">
+      <h1>dfgfgdfg</h1>
+    </div>
+    <div class="row col-lg-3">
+      <h1>dfgfgdfg</h1>
+    </div>
+     
+</div> -->
+<div class="container-fluid">
+  <div class="row">
+    <!-- Sidebar -->
+    <!-- Content -->
+
   </div>
 </div>
   <!-- Main content -->
@@ -815,6 +989,22 @@
     type: 'bar',
     data: salesData,
   });
+</script>
+<script>
+    // Add custom script to handle double-click toggle off
+    document.addEventListener('DOMContentLoaded', function () {
+        var navbarToggler = document.querySelector('.navbar-toggler');
+        var navbarCollapse = document.querySelector('.navbar-collapse');
+
+        navbarToggler.addEventListener('click', function () {
+            // Manually toggle the collapse state on each click
+            if (navbarCollapse.classList.contains('show')) {
+                navbarCollapse.classList.remove('show');
+            } else {
+                navbarCollapse.classList.add('show');
+            }
+        });
+    });
 </script>
 <script>
 var salesData = {
@@ -862,6 +1052,7 @@ var salesData = {
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
   new DataTable('#example');
+  
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
